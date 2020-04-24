@@ -1,0 +1,9 @@
+# Backend
+.mypy_cache/
+__pycache__/
+
+
+# IDE
+.vscode/
+.idea/
+
