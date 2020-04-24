@@ -28,4 +28,10 @@ Running a development version is as simple as:
 ```bash
 $ python app.py
 ```
+Test, if you like:
+```bash
+$  curl localhost:5000
+"Hello, World!"
+```
 
+Don't forget to add the Python interpreter you've just created to your IDE!
