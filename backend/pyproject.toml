@@ -1,0 +1,23 @@
+[tool.black]
+target-version = ['py38']
+line-length = 88
+include = '\.pyi?$'
+exclude = '''
+
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.nox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+  |
+)
+'''
