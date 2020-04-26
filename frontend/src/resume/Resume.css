@@ -1,12 +1,12 @@
 .resume-basics-section {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 1rem;
 }
 
 .grid > div {
-    background: #EDE7F6;
-    padding: 1.5rem;
-    border-radius: 1rem;
-    text-align: left;
+  background: #ede7f6;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: left;
 }

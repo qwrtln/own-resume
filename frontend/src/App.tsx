@@ -1,5 +1,5 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 import ResumeContainer from "./resume/ResumeContainer";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
         <h4>Kiedyś</h4>
       </header>
       <div>
-        <ResumeContainer/>
+        <ResumeContainer />
       </div>
     </div>
   );
