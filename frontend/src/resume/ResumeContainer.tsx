@@ -11,7 +11,7 @@ const ResumeContainer = () => (
 function getResumeFromRedux(): ResumeModel {
   return {
     basics: {
-      name: "Андрей Вёнцэк",
+      name: "Анджей Вьонцек",
       summary: "Pro Gram I Sta",
       email: "Proprietary (not Gmail for sure)",
     },
