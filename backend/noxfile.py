@@ -33,6 +33,6 @@ def formatting(session):
 
 
 @nox.session(reuse_venv=True)
-def typing_check(session):
+def typing(session):
     session.install("mypy")
     session.run(*mypy_args)
