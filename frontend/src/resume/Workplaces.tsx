@@ -5,7 +5,7 @@ const Workplaces: React.FC<WorkplacesModel> = (props) => (
   <div>
     <h2>Workplaces:</h2>
     {props.workplaces.map((workplace) => (
-      <React.Fragment>
+      <div key={workplace.company}>
         <h3>{workplace.company}</h3>
         <h4>{workplace.position}</h4>
         <div className="resume-workplace-section">
@@ -13,7 +13,7 @@ const Workplaces: React.FC<WorkplacesModel> = (props) => (
             <h5>Summary: {workplace.summary}</h5>
           </div>
         </div>
-      </React.Fragment>
+      </div>
     ))}
   </div>
 );

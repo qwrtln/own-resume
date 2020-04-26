@@ -7,8 +7,14 @@ import Workplaces from "./Workplaces";
 const Resume: React.FC<ResumeModel> = (props) => (
   <div>
     <Basics {...props.basics} />
-    <Workplaces workplaces={props.work} />
+    {shouldRenderWorkplacesSection(props) && (
+      <Workplaces workplaces={props.work} />
+    )}
   </div>
 );
+
+const shouldRenderWorkplacesSection = (props: ResumeModel) => {
+  return props.work.length > 0;
+};
 
 export default Resume;

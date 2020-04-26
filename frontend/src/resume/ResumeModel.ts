@@ -4,20 +4,20 @@ export interface ResumeModel {
 }
 
 export interface BasicsModel {
-  name: String;
-  label?: String;
-  picture?: String;
-  email: String;
-  phone?: String;
-  website?: String;
-  summary?: String;
+  name: string;
+  label?: string;
+  picture?: string;
+  email: string;
+  phone?: string;
+  website?: string;
+  summary?: string;
 }
 
 export interface WorkModel {
-  company: String;
-  position?: String;
-  website?: String;
-  startDate?: String;
-  endDate?: String;
-  summary?: String;
+  company: string;
+  position?: string;
+  website?: string;
+  startDate?: string;
+  endDate?: string;
+  summary?: string;
 }
