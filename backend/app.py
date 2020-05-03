@@ -6,7 +6,7 @@ from resources import Hello, Resume
 app = Flask(__name__)
 api = Api(app)
 
-api.add_resource(Hello, "/hello")
+api.add_resource(Hello, "/")
 api.add_resource(Resume, "/resume")
 
 if __name__ == "__main__":
