@@ -2,6 +2,10 @@ from typing import Any, Dict, Tuple
 
 from flask_restful import Resource
 
+
+from models.work import WorkModel
+
+
 resume = {
     "basics": {
         "name": "Bonawentura Kluczbork",
