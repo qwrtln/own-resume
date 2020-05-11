@@ -12,21 +12,12 @@ resume = {
         "summary": "Pro Gram I Sta",
         "email": "proprietary@noneofyour.business",
     },
-    "work": [
-        {
-            "company": "Żółć",
-            "position": "Go Developer",
-            "summary": "We produced dictionaries!",
-        },
-        {
-            "company": "Corpo",
-            "position": "Super Señor Developer",
-            "summary": "I made magic.",
-        },
-    ],
+    "work": None
 }
 
 
 class Resume(Resource):
     def get(self) -> Tuple[Dict[str, Any], int]:
+        works = [work.json() for work in WorkModel.fetch_all()]
+        resume["work"] = works  # type: ignore
         return resume, 200
