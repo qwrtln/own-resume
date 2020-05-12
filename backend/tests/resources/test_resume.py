@@ -2,18 +2,18 @@ import json
 from copy import copy
 
 from .base import client
-from resources.resume import resume
+from tests.fixtures.test_resume import test_resume
 
 
 def test_get(client):
     rv = client.get("/resume")
     assert rv.status_code == 200
-    assert resume == json.loads(rv.data)
+    assert test_resume == json.loads(rv.data)
 
 
 def test_get_wrong_data(client):
     rv = client.get("/resume")
-    broken_resume = copy(resume)
+    broken_resume = copy(test_resume)
     broken_resume["basics"]["name"] = "Mścisław Cabacki"
     assert rv.status_code == 200
     assert broken_resume != json.loads(rv.data)
