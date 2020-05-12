@@ -5,6 +5,7 @@ requirements = [
     "-r",
     "requirements.txt",
     "pytest",
+    "Flask-Testing",
 ]
 black_args = [
     "black",
