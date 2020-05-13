@@ -20,7 +20,8 @@ class TestWork(TestModelBase):
         "summary": "summary2",
     }
 
-    def given_workplace(self, work):
+    @staticmethod
+    def given_workplace(work):
         workplace = WorkModel(**work)
         workplace.save_to_db()
         return workplace
