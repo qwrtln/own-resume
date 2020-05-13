@@ -1,0 +1,4 @@
+[flake8]
+ignore = E501
+exclude = __pycache__,.mypy_cache,.pytest_cache,.nox,.idea,*/__init__.py
+max-complexity = 10
