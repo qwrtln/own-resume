@@ -1,16 +1,14 @@
-from flask_sqlalchemy import SQLAlchemy
+from flask import Flask
 from flask_testing import TestCase
 
-from app import app
+from db import db
 
 
-db = SQLAlchemy()
-
-
-class TestResourceBase(TestCase):
+class TestModelBase(TestCase):
     def create_app(self):
+        app = Flask(__name__)
         app.config["TESTING"] = True
-        app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///tests/fixtures/test_data.db"
+        app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite://"
         app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
         db.init_app(app)
         return app

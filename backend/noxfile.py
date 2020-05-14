@@ -5,6 +5,7 @@ requirements = [
     "-r",
     "requirements.txt",
     "pytest",
+    "Flask-Testing",
 ]
 black_args = [
     "black",
@@ -21,18 +22,24 @@ mypy_args = [
 
 
 @nox.session(reuse_venv=True)
-def tests(session):
+def pytest(session):
     session.install(*requirements)
     session.run("pytest")
 
 
 @nox.session(reuse_venv=True)
-def formatting(session):
+def black(session):
     session.install("black")
     session.run(*black_args)
 
 
 @nox.session(reuse_venv=True)
-def typing(session):
+def mypy(session):
     session.install("mypy")
     session.run(*mypy_args)
+
+
+@nox.session(reuse_venv=True)
+def flake8(session):
+    session.install("flake8")
+    session.run("flake8")
