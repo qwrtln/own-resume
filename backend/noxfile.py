@@ -15,9 +15,8 @@ black_args = [
 ]
 mypy_args = [
     "mypy",
-    "resources/",
     "models",
-    "app.py",
+    "main.py",
 ]
 
 
