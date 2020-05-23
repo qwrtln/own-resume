@@ -1,14 +1,7 @@
 from copy import copy
 
-from fastapi.testclient import TestClient
-
-from main import app, get_db
+from tests.base import client
 from tests.fixtures.test_resume import test_resume
-from tests.fixtures.test_db import override_get_db
-
-
-app.dependency_overrides[get_db] = override_get_db
-client = TestClient(app)
 
 
 def test_read_resume():

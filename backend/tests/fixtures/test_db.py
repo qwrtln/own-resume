@@ -17,3 +17,7 @@ def override_get_db():
         yield db
     finally:
         db.close()
+
+
+def get_testing_db():
+    return next(override_get_db())
