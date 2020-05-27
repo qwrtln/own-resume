@@ -3,8 +3,8 @@ from collections import namedtuple
 
 from tests.fixtures.test_resume import test_resume
 
-Basics = namedtuple("Basics", ["name", "summary", "email"])
-Work = namedtuple("Work", ["company", "position", "summary"])
+Basics = namedtuple("Basics", list(test_resume["basics"].keys()))
+Work = namedtuple("Work", list(test_resume["work"][0].keys()))
 
 
 if __name__ == "__main__":
@@ -13,7 +13,10 @@ if __name__ == "__main__":
     basics = Basics(**test_resume["basics"])
     work = [Work(**w) for w in test_resume["work"]]
 
-    db_file = sys.argv[1] if sys.argv[1] else "test_data.db"
+    if len(sys.argv) > 1:
+        db_file = sys.argv[1]
+    else:
+        db_file = "test_data.db"
     connection = sqlite3.connect(db_file)
     cursor = connection.cursor()
 
