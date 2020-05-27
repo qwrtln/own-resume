@@ -23,8 +23,12 @@ def create_work_item(db: Session, work: Work) -> WorkModel:
 
 
 def update_work_item(db: Session, work: Work) -> WorkModel:
-    db.query(WorkModel).filter(WorkModel.company == work.company).update(work)
-    return get_work_by_company(db, work.company)
+    db_work = get_work_by_company(db, work.company)
+    db_work.company = work.company
+    db_work.position = work.position
+    db_work.summary = work.summary
+    db.commit()
+    return db_work
 
 
 def delete_work_item(db: Session, work: Work) -> None:

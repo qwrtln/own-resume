@@ -5,6 +5,7 @@ requirements = [
     "-r",
     "requirements.txt",
     "pytest",
+    "requests",
 ]
 black_args = [
     "black",

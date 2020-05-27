@@ -1,7 +1,13 @@
 import pytest
 
 from tests.base import TestCrudBase
-from work.crud import get_work_by_company, create_work_item, delete_work_item, get_all_work, update_work_item
+from work.crud import (
+    create_work_item,
+    delete_work_item,
+    get_all_work,
+    get_work_by_company,
+    update_work_item,
+)
 from work.model import WorkModel
 from work.schema import Work
 
@@ -51,8 +57,9 @@ class TestWorkCrud(TestCrudBase, WorkMixin):
 
     def test_modify_workplace(self):
         changed_work = Work(**self.work_1)
-        _ = create_work_item(self.db, changed_work)
+        old_work = create_work_item(self.db, changed_work)
         changed_work.summary = "Changes!"
         db_work = update_work_item(self.db, changed_work)
         self.assertEqual(db_work.summary, "Changes!")
-
+        self.assertEqual(old_work.company, changed_work.company)
+        self.assertEqual(old_work.position, changed_work.position)
