@@ -5,7 +5,7 @@ requirements = [
     "-r",
     "requirements.txt",
     "pytest",
-    "Flask-Testing",
+    "requests",
 ]
 black_args = [
     "black",
@@ -15,9 +15,10 @@ black_args = [
 ]
 mypy_args = [
     "mypy",
-    "resources/",
-    "models",
-    "app.py",
+    "basics",
+    "main.py",
+    "resume",
+    "work",
 ]
 
 
