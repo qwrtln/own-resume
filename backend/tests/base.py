@@ -1,5 +1,6 @@
 import shutil
 import unittest
+import warnings
 
 from fastapi.testclient import TestClient
 
@@ -10,10 +11,16 @@ app.dependency_overrides[get_db] = override_get_db
 client = TestClient(app)
 
 
-class TestCrudBase(unittest.TestCase):
+class TestBase(unittest.TestCase):
     def setUp(self):
         self.db = get_testing_db()
         shutil.copy(DB_FILE, f"{DB_FILE}_")
 
     def tearDown(self):
-        shutil.move(f"{DB_FILE}_", DB_FILE)
+        try:
+            shutil.move(f"{DB_FILE}_", DB_FILE)
+        except FileNotFoundError:
+            warnings.warn(
+                "Trying to restore nonexistent DB file. This should never happen!"
+            )
+            raise

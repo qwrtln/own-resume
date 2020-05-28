@@ -1,9 +1,10 @@
 import pytest
+from sqlalchemy.exc import InterfaceError
 
 from basics.crud import get_basics, update_basics
 from basics.model import BasicsModel
 from basics.schema import Basics
-from tests.base import TestCrudBase
+from tests.base import TestBase
 from tests.fixtures.test_resume import test_resume
 
 
@@ -16,7 +17,7 @@ class BasicsMixin:
 
 
 @pytest.mark.crud
-class TestBasicsCrud(TestCrudBase, BasicsMixin):
+class TestBasicsCrud(TestBase, BasicsMixin):
     def test_get(self):
         basics = get_basics(self.db)
         self.assertIsInstance(basics, BasicsModel)
@@ -29,3 +30,14 @@ class TestBasicsCrud(TestCrudBase, BasicsMixin):
         self.assertEqual(db_basics.name, new_basics.name)
         self.assertEqual(db_basics.email, new_basics.email)
         self.assertEqual(db_basics.summary, new_basics.summary)
+
+    def test_basics_email_wrong_type(self):
+        basics = get_basics(self.db)
+
+        class FakeEmail:
+            pass
+
+        basics.email = FakeEmail()
+        with self.assertRaises(InterfaceError) as error:
+            update_basics(self.db, basics)
+        self.assertIn("unsupported type", str(error.exception))

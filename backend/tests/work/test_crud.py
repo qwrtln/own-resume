@@ -1,6 +1,6 @@
 import pytest
 
-from tests.base import TestCrudBase
+from tests.base import TestBase
 from work.crud import (
     create_work_item,
     delete_work_item,
@@ -27,7 +27,7 @@ class WorkMixin:
 
 
 @pytest.mark.crud
-class TestWorkCrud(TestCrudBase, WorkMixin):
+class TestWorkCrud(TestBase, WorkMixin):
     def test_get_by_company(self):
         work = get_work_by_company(self.db, "Żółć")
         self.assertIsInstance(work, WorkModel)
