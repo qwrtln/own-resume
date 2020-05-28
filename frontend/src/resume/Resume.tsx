@@ -5,7 +5,7 @@ import Basics from "./Basics";
 import Workplaces from "./Workplaces";
 
 const Resume: React.FC<ResumeModel> = (props) => (
-  <div>
+  <div className="resume">
     <Basics {...props.basics} />
     {shouldRenderWorkplacesSection(props) && (
       <Workplaces workplaces={props.work} />

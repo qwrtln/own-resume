@@ -2,8 +2,8 @@ import React from "react";
 import { render } from "@testing-library/react";
 import Resume from "./Resume";
 
-test("render resume with workplaces section", () => {
-  const { getByText } = render(
+test("render resume", () => {
+   let resume = render(
     <Resume
       basics={{ name: "Johnny Python", email: "" }}
       work={[
@@ -14,6 +14,5 @@ test("render resume with workplaces section", () => {
     />
   );
 
-  const linkElement = getByText(/Workplaces:/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(resume).toMatchSnapshot();
 });
