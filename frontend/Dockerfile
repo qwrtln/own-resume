@@ -9,7 +9,7 @@ RUN npm install
 COPY public ./public/
 COPY src ./src/
 COPY tsconfig.json ./
-RUN npm run build | grep "File sizes after gzip" -A5
+RUN npm run build
 
 FROM nginx:alpine
 

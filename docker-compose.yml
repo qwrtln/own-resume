@@ -1,7 +1,11 @@
 version: '3.7'
 
 services:
+  api:
+    build: backend
+
   ui:
     build: frontend
     ports:
       - "5000:5000"
+
