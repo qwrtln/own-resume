@@ -2,7 +2,7 @@
 name = "resume-api"
 version = "0.1.0"
 description = "Backend for resume."
-authors = ["Andrzej Wiącek <andrzej.wiacek@qwrtln.nl>"]
+authors = ["Andrzej Wiącek <andrzej.wiacek@qwrtln.nl>", "Marcin Szewczyk <marcin91.szewczyk@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
