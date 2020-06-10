@@ -1,8 +1,16 @@
-FROM python:3.8.2-alpine
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.8
 
-COPY requirements.txt ./resume-api/
-WORKDIR /resume-api
+RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | POETRY_HOME=/opt/poetry python && \
+    cd /usr/local/bin && \
+    ln -s /opt/poetry/bin/poetry && \
+    poetry config virtualenvs.create false
 
-RUN pip install -r requirements.txt
+COPY ./pyproject.toml ./app/poetry.lock* /app/
 
-RUN pip freeze
+RUN poetry install --no-root --no-dev
+
+COPY ./main.py ./database.py ./data.db /app/
+COPY ./resume/ /app/resume/
+COPY ./basics/ /app/basics/
+COPY ./work/ /app/work/
+

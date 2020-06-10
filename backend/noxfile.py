@@ -1,12 +1,6 @@
 import nox
 
 
-requirements = [
-    "-r",
-    "requirements.txt",
-    "pytest",
-    "requests",
-]
 black_args = [
     "black",
     "--check",
@@ -24,7 +18,7 @@ mypy_args = [
 
 @nox.session(reuse_venv=True)
 def pytest(session):
-    session.install(*requirements)
+    session.run("poetry", "install", external=True)
     session.run("pytest")
 
 

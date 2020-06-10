@@ -3,6 +3,7 @@
 ### Installation
 
 Make sure you have Python 3.8.2+ installed on your system. It is recommended to create virtual environment for your project. Pyenv helps you manage such stuff: https://github.com/pyenv/pyenv
+For dependency management Poetry is used: https://python-poetry.org/docs/
 
 Assuming you have pyenv up and running with Python 3.8.2 installed, create a virtualenv:
 
@@ -17,7 +18,7 @@ $ pyenv activate my-venv-name
 
 Install requirements:
 ```bash
-$ pip install -r requirements.txt -r requirements.dev.txt
+$ poetry install
 ```
 
 And you're good to go!

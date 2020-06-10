@@ -1,3 +1,27 @@
+[tool.poetry]
+name = "resume-api"
+version = "0.1.0"
+description = "Backend for resume."
+authors = ["Andrzej Wiącek <andrzej.wiacek@qwrtln.nl>", "Marcin Szewczyk <marcin91.szewczyk@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "^0.55.1"
+sqlalchemy = "^1.3.17"
+uvicorn = "^0.11.5"
+
+[tool.poetry.dev-dependencies]
+black = "^19.10b0"
+flake8 = "^3.8.2"
+mypy = "^0.770"
+pytest = "^5.4.2"
+requests = "^2.23.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
 [tool.black]
 target-version = ['py38']
 line-length = 88
