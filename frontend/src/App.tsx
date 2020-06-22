@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import {isLoggedIn} from "./auth/AuthService";
+import { isLoggedIn } from "./auth/AuthService";
 import ResumeContainer from "./resume/ResumeContainer";
 import LoginContainer from "./login/LoginContainer";
 import {
@@ -8,8 +8,8 @@ import {
   Switch,
   Route,
   Link,
-  Redirect} from "react-router-dom";
-
+  Redirect,
+} from "react-router-dom";
 
 function App() {
   return (
@@ -17,16 +17,20 @@ function App() {
       <div>
         <Router>
           <Switch>
-            <Route path='/login' exact={true}>
-              <LoginContainer/>
+            <Route path="/login" exact={true}>
+              <LoginContainer />
             </Route>
-            <Route path='/' exact={true}
-              render={
-                ({ location }) => isLoggedIn() ? <ResumeContainer/> : <Redirect to={{pathname: '/login'}}/>
+            <Route
+              path="/"
+              exact={true}
+              render={({ location }) =>
+                isLoggedIn() ? (
+                  <ResumeContainer />
+                ) : (
+                  <Redirect to={{ pathname: "/login" }} />
+                )
               }
-            >
-
-            </Route>
+            ></Route>
           </Switch>
         </Router>
       </div>

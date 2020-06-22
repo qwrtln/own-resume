@@ -1,8 +1,8 @@
 import React from "react";
 import Resume from "./Resume";
 import { ResumeModel } from "./ResumeModel";
-import {logOut} from "../auth/AuthService";
-import {RouteComponentProps, withRouter} from "react-router";
+import { logOut } from "../auth/AuthService";
+import { RouteComponentProps, withRouter } from "react-router";
 
 class ResumeContainer extends React.Component<Props, State> {
   state = {

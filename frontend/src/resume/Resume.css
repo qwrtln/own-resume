@@ -53,7 +53,7 @@
 .workplaces {
   grid-row: 2;
   grid-column: 6 / 13;
-  grid-template-columns: 1fr 4fr
+  grid-template-columns: 1fr 4fr;
 }
 
 .workplaces > h2 {
@@ -64,4 +64,3 @@
 .workplace > h3 {
   font-size: 1.6rem;
 }
-

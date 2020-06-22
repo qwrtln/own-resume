@@ -1,4 +1,3 @@
-
 let loggedIn = false;
 
 export function isLoggedIn(): boolean {
@@ -12,5 +11,3 @@ export function logIn() {
 export function logOut() {
   loggedIn = false;
 }
-
-
