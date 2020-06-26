@@ -24,7 +24,7 @@ const Basics: React.FC<BasicsModel> = (props) => (
     </div>
     <div className="basics__contact-section"></div>
     <div className="basics__side-section">
-      <img src={photo} className="basics-photo" />
+      <img src={photo} className="basics-photo" alt="That's me." />
       <h3>About me</h3>
     </div>
   </React.Fragment>

@@ -51,6 +51,7 @@ Object {
           class="basics__side-section"
         >
           <img
+            alt="That's me."
             class="basics-photo"
             src="photo.jpg"
           />
@@ -130,6 +131,7 @@ Object {
         class="basics__side-section"
       >
         <img
+          alt="That's me."
           class="basics-photo"
           src="photo.jpg"
         />

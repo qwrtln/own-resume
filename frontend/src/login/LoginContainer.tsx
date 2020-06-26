@@ -1,5 +1,5 @@
 import React from "react";
-import { RouteComponentProps, withRouter, Redirect } from "react-router";
+import { RouteComponentProps, withRouter } from "react-router";
 
 import { logIn } from "../auth/AuthService";
 
