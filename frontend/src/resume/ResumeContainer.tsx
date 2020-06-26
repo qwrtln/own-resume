@@ -14,7 +14,7 @@ class ResumeContainer extends React.Component<Props, State> {
     return (
       <div>
         <div>
-          <button onClick={this.logOut.bind(this)}>Fcuk it, I'm out!</button>
+          <button onClick={this.logOut.bind(this)}>Logout!</button>
         </div>
         {resume ? <Resume basics={resume.basics} work={resume.work} /> : null}
       </div>

@@ -9,7 +9,7 @@ class ResumeContainer extends React.Component<Props, State> {
       <div>
         <h2>Who are you, Visitor?</h2>
         <button onClick={this.authenticate.bind(this)}>
-          I'm allowed here, let me in
+          Login
         </button>
       </div>
     );
