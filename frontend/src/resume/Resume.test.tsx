@@ -3,7 +3,7 @@ import { render } from "@testing-library/react";
 import Resume from "./Resume";
 
 test("render resume", () => {
-   let resume = render(
+  let resume = render(
     <Resume
       basics={{ name: "Johnny Python", email: "" }}
       work={[

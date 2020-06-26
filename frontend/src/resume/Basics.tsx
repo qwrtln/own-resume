@@ -1,6 +1,6 @@
 import React from "react";
-import {BasicsModel} from "./ResumeModel";
-import photo from "../assets/photo.jpg"
+import { BasicsModel } from "./ResumeModel";
+import photo from "../assets/photo.jpg";
 
 const Basics: React.FC<BasicsModel> = (props) => (
   <React.Fragment>
@@ -22,10 +22,9 @@ const Basics: React.FC<BasicsModel> = (props) => (
         <span>{props.website}</span>
       </div>
     </div>
-    <div className="basics__contact-section">
-    </div>
+    <div className="basics__contact-section"></div>
     <div className="basics__side-section">
-      <img src={photo} className="basics-photo"/>
+      <img src={photo} className="basics-photo" alt="That's me." />
       <h3>About me</h3>
     </div>
   </React.Fragment>

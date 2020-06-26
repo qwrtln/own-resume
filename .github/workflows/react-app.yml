@@ -1,0 +1,19 @@
+name: TypeScript Frontend Tests
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 13.x
+        architecture: x64
+    - run: cd frontend || return && npm install
+    - run: cd frontend || return && npm run format
+    - run: cd frontend || return && npm test --ci
+    - run: cd frontend || return && npm run build

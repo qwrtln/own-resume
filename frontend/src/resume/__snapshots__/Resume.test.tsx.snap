@@ -9,7 +9,7 @@ Object {
         class="resume"
       >
         <div
-          class="resume__name-section"
+          class="basics__name-section"
         >
           <h1>
             Johnny Python
@@ -17,11 +17,11 @@ Object {
           <h2 />
         </div>
         <div
-          class="resume__contact-section"
+          class="basics__contact-section"
         >
           <div>
             <span
-              class="resume-basics__contact-field-label"
+              class="basics__contact-field-label"
             >
               Mail:
             </span>
@@ -29,7 +29,7 @@ Object {
           </div>
           <div>
             <span
-              class="resume-basics__contact-field-label"
+              class="basics__contact-field-label"
             >
               Phone:
             </span>
@@ -37,7 +37,7 @@ Object {
           </div>
           <div>
             <span
-              class="resume-basics__contact-field-label"
+              class="basics__contact-field-label"
             >
               Website:
             </span>
@@ -45,13 +45,14 @@ Object {
           </div>
         </div>
         <div
-          class="resume__contact-section"
+          class="basics__contact-section"
         />
         <div
-          class="resume__side-section"
+          class="basics__side-section"
         >
           <img
-            class="resume-photo"
+            alt="That's me."
+            class="basics-photo"
             src="photo.jpg"
           />
           <h3>
@@ -59,13 +60,13 @@ Object {
           </h3>
         </div>
         <div
-          class="resume__workplaces-section"
+          class="workplaces"
         >
           <h2>
             Workplaces:
           </h2>
           <div
-            class="resume__workplace"
+            class="workplace"
           >
             <h3>
               Company 1
@@ -88,7 +89,7 @@ Object {
       class="resume"
     >
       <div
-        class="resume__name-section"
+        class="basics__name-section"
       >
         <h1>
           Johnny Python
@@ -96,11 +97,11 @@ Object {
         <h2 />
       </div>
       <div
-        class="resume__contact-section"
+        class="basics__contact-section"
       >
         <div>
           <span
-            class="resume-basics__contact-field-label"
+            class="basics__contact-field-label"
           >
             Mail:
           </span>
@@ -108,7 +109,7 @@ Object {
         </div>
         <div>
           <span
-            class="resume-basics__contact-field-label"
+            class="basics__contact-field-label"
           >
             Phone:
           </span>
@@ -116,7 +117,7 @@ Object {
         </div>
         <div>
           <span
-            class="resume-basics__contact-field-label"
+            class="basics__contact-field-label"
           >
             Website:
           </span>
@@ -124,13 +125,14 @@ Object {
         </div>
       </div>
       <div
-        class="resume__contact-section"
+        class="basics__contact-section"
       />
       <div
-        class="resume__side-section"
+        class="basics__side-section"
       >
         <img
-          class="resume-photo"
+          alt="That's me."
+          class="basics-photo"
           src="photo.jpg"
         />
         <h3>
@@ -138,13 +140,13 @@ Object {
         </h3>
       </div>
       <div
-        class="resume__workplaces-section"
+        class="workplaces"
       >
         <h2>
           Workplaces:
         </h2>
         <div
-          class="resume__workplace"
+          class="workplace"
         >
           <h3>
             Company 1
